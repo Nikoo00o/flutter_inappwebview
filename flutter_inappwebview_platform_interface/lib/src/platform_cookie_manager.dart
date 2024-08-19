@@ -8,7 +8,6 @@ import 'types/main.dart';
 import 'web_uri.dart';
 import 'inappwebview_platform.dart';
 import 'in_app_webview/platform_headless_in_app_webview.dart';
-import 'webview_environment/platform_webview_environment.dart';
 
 /// Object specifying creation parameters for creating a [PlatformCookieManager].
 ///
@@ -17,13 +16,7 @@ import 'webview_environment/platform_webview_environment.dart';
 @immutable
 class PlatformCookieManagerCreationParams {
   /// Used by the platform implementation to create a new [PlatformCookieManager].
-  const PlatformCookieManagerCreationParams({this.webViewEnvironment});
-
-  ///Used to create the [PlatformCookieManager] using the specified environment.
-  ///
-  ///**Officially Supported Platforms/Implementations**:
-  ///- Windows
-  final PlatformWebViewEnvironment? webViewEnvironment;
+  const PlatformCookieManagerCreationParams();
 }
 
 ///{@template flutter_inappwebview_platform_interface.PlatformCookieManager}
@@ -40,7 +33,6 @@ class PlatformCookieManagerCreationParams {
 ///- iOS
 ///- MacOS
 ///- Web
-///- Windows
 ///{@endtemplate}
 abstract class PlatformCookieManager extends PlatformInterface {
   /// Creates a new [PlatformCookieManager]
@@ -95,7 +87,6 @@ abstract class PlatformCookieManager extends PlatformInterface {
   ///- iOS ([Official API - WKHTTPCookieStore.setCookie](https://developer.apple.com/documentation/webkit/wkhttpcookiestore/2882007-setcookie))
   ///- MacOS ([Official API - WKHTTPCookieStore.setCookie](https://developer.apple.com/documentation/webkit/wkhttpcookiestore/2882007-setcookie))
   ///- Web
-  ///- Windows
   ///{@endtemplate}
   Future<bool> setCookie(
       {required WebUri url,
@@ -135,7 +126,6 @@ abstract class PlatformCookieManager extends PlatformInterface {
   ///- iOS ([Official API - WKHTTPCookieStore.getAllCookies](https://developer.apple.com/documentation/webkit/wkhttpcookiestore/2882005-getallcookies))
   ///- MacOS ([Official API - WKHTTPCookieStore.getAllCookies](https://developer.apple.com/documentation/webkit/wkhttpcookiestore/2882005-getallcookies))
   ///- Web
-  ///- Windows
   ///{@endtemplate}
   Future<List<Cookie>> getCookies(
       {required WebUri url,
@@ -166,7 +156,6 @@ abstract class PlatformCookieManager extends PlatformInterface {
   ///- iOS
   ///- MacOS
   ///- Web
-  ///- Windows
   ///{@endtemplate}
   Future<Cookie?> getCookie(
       {required WebUri url,
@@ -202,7 +191,6 @@ abstract class PlatformCookieManager extends PlatformInterface {
   ///- iOS ([Official API - WKHTTPCookieStore.delete](https://developer.apple.com/documentation/webkit/wkhttpcookiestore/2882009-delete)
   ///- MacOS ([Official API - WKHTTPCookieStore.delete](https://developer.apple.com/documentation/webkit/wkhttpcookiestore/2882009-delete)
   ///- Web
-  ///- Windows
   ///{@endtemplate}
   Future<bool> deleteCookie(
       {required WebUri url,
@@ -240,7 +228,6 @@ abstract class PlatformCookieManager extends PlatformInterface {
   ///- iOS
   ///- MacOS
   ///- Web
-  ///- Windows
   ///{@endtemplate}
   Future<bool> deleteCookies(
       {required WebUri url,
@@ -267,7 +254,6 @@ abstract class PlatformCookieManager extends PlatformInterface {
   ///- Android native WebView ([Official API - CookieManager.removeAllCookies](https://developer.android.com/reference/android/webkit/CookieManager#removeAllCookies(android.webkit.ValueCallback%3Cjava.lang.Boolean%3E)))
   ///- iOS ([Official API - WKWebsiteDataStore.removeData](https://developer.apple.com/documentation/webkit/wkwebsitedatastore/1532938-removedata))
   ///- MacOS ([Official API - WKWebsiteDataStore.removeData](https://developer.apple.com/documentation/webkit/wkwebsitedatastore/1532938-removedata))
-  ///- Windows
   ///{@endtemplate}
   Future<bool> deleteAllCookies() {
     throw UnimplementedError(

@@ -58,7 +58,7 @@ class InAppWebViewSettings_ {
   ///it will be automatically inferred as `true`, otherwise, the default value is `false`.
   ///This logic will not be applied for [PlatformInAppBrowser], where you must set the value manually.
   @SupportedPlatforms(
-      platforms: [AndroidPlatform(), IOSPlatform(), MacOSPlatform(), WindowsPlatform()])
+      platforms: [AndroidPlatform(), IOSPlatform(), MacOSPlatform()])
   bool? useShouldOverrideUrlLoading;
 
   ///Set to `true` to be able to listen at the [PlatformWebViewCreationParams.onLoadResource] event.
@@ -98,11 +98,7 @@ class InAppWebViewSettings_ {
     MacOSPlatform(
         apiName: "WKWebView.customUserAgent",
         apiUrl:
-            "https://developer.apple.com/documentation/webkit/wkwebview/1414950-customuseragent"),
-    WindowsPlatform(
-      apiName: 'ICoreWebView2Settings2.put_UserAgent',
-      apiUrl: 'https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2settings2?view=webview2-1.0.2210.55#put_useragent'
-    )
+            "https://developer.apple.com/documentation/webkit/wkwebview/1414950-customuseragent")
   ])
   String? userAgent;
 
@@ -134,12 +130,7 @@ class InAppWebViewSettings_ {
         apiName: "WKWebpagePreferences.allowsContentJavaScript",
         apiUrl:
             "https://developer.apple.com/documentation/webkit/wkwebpagepreferences/3552422-allowscontentjavascript/"),
-    WebPlatform(requiresSameOrigin: false),
-    WindowsPlatform(
-        apiName: "ICoreWebView2Settings.put_IsScriptEnabled",
-        apiUrl:
-        "https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2settings?view=webview2-1.0.2210.55#put_isscriptenabled"
-    )
+    WebPlatform(requiresSameOrigin: false)
   ])
   bool? javaScriptEnabled;
 
@@ -316,12 +307,7 @@ because there isn't any way to make the website data store non-persistent for th
   @SupportedPlatforms(platforms: [
     AndroidPlatform(),
     IOSPlatform(),
-    MacOSPlatform(available: "12.0"),
-    WindowsPlatform(
-      available: '1.0.774.44',
-      apiName: 'ICoreWebView2Controller2.put_DefaultBackgroundColor',
-      apiUrl: 'https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2controller2?view=webview2-1.0.2210.55#put_defaultbackgroundcolor'
-    )
+    MacOSPlatform(available: "12.0")
   ])
   bool? transparentBackground;
 
@@ -337,13 +323,7 @@ because there isn't any way to make the website data store non-persistent for th
 
   ///Set to `true` to disable context menu. The default value is `false`.
   @SupportedPlatforms(
-      platforms: [AndroidPlatform(), IOSPlatform(), WebPlatform(),
-      WindowsPlatform(
-          apiName: "ICoreWebView2Settings.put_AreDefaultContextMenusEnabled",
-          apiUrl:
-          "https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2settings?view=webview2-1.0.2210.55#put_aredefaultcontextmenusenabled"
-      )
-    ])
+      platforms: [AndroidPlatform(), IOSPlatform(), WebPlatform()])
   bool? disableContextMenu;
 
   ///Set to `false` if the WebView should not support zooming using its on-screen zoom controls and gestures. The default value is `true`.
@@ -353,12 +333,7 @@ because there isn't any way to make the website data store non-persistent for th
         apiUrl:
             "https://developer.android.com/reference/android/webkit/WebSettings?hl=en#setSupportZoom(boolean)"),
     IOSPlatform(),
-    MacOSPlatform(),
-    WindowsPlatform(
-        apiName: "ICoreWebView2Settings.put_IsZoomControlEnabled",
-        apiUrl:
-        "https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2settings?view=webview2-1.0.2210.55#put_iszoomcontrolenabled"
-    )
+    MacOSPlatform()
   ])
   bool? supportZoom;
 
@@ -1562,12 +1537,7 @@ as it can cause framerate drops on animations in Android 9 and lower (see [Hybri
         available: "13.3",
         apiName: "WKWebView.isInspectable",
         apiUrl:
-            "https://developer.apple.com/documentation/webkit/wkwebview/4111163-isinspectable"),
-    WindowsPlatform(
-        apiName: "ICoreWebView2Settings.put_AreDevToolsEnabled",
-        apiUrl:
-        "https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2settings?view=webview2-1.0.2210.55#put_aredevtoolsenabled"
-    )
+            "https://developer.apple.com/documentation/webkit/wkwebview/4111163-isinspectable")
   ])
   bool? isInspectable;
 

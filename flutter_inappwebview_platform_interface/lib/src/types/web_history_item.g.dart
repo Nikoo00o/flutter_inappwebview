@@ -9,12 +9,6 @@ part of 'web_history_item.dart';
 ///A convenience class for accessing fields in an entry in the back/forward list of a `WebView`.
 ///Each [WebHistoryItem] is a snapshot of the requested history item.
 class WebHistoryItem {
-  ///Unique id of the navigation history entry.
-  ///
-  ///**Officially Supported Platforms/Implementations**:
-  ///- Windows
-  int? entryId;
-
   ///0-based position index in the back-forward [WebHistory.list].
   int? index;
 
@@ -30,12 +24,7 @@ class WebHistoryItem {
   ///Url of this history item.
   WebUri? url;
   WebHistoryItem(
-      {this.entryId,
-      this.index,
-      this.offset,
-      this.originalUrl,
-      this.title,
-      this.url});
+      {this.index, this.offset, this.originalUrl, this.title, this.url});
 
   ///Gets a possible [WebHistoryItem] instance from a [Map] value.
   static WebHistoryItem? fromMap(Map<String, dynamic>? map) {
@@ -43,7 +32,6 @@ class WebHistoryItem {
       return null;
     }
     final instance = WebHistoryItem(
-      entryId: map['entryId'],
       index: map['index'],
       offset: map['offset'],
       originalUrl:
@@ -57,7 +45,6 @@ class WebHistoryItem {
   ///Converts instance to a map.
   Map<String, dynamic> toMap() {
     return {
-      "entryId": entryId,
       "index": index,
       "offset": offset,
       "originalUrl": originalUrl?.toString(),
@@ -73,6 +60,6 @@ class WebHistoryItem {
 
   @override
   String toString() {
-    return 'WebHistoryItem{entryId: $entryId, index: $index, offset: $offset, originalUrl: $originalUrl, title: $title, url: $url}';
+    return 'WebHistoryItem{index: $index, offset: $offset, originalUrl: $originalUrl, title: $title, url: $url}';
   }
 }

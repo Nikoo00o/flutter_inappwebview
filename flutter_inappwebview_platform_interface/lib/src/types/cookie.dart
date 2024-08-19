@@ -14,8 +14,7 @@ class Cookie_ {
     IOSPlatform(),
     MacOSPlatform(),
     AndroidPlatform(),
-    WebPlatform(),
-    WindowsPlatform()
+    WebPlatform()
   ])
   String name;
 
@@ -24,8 +23,7 @@ class Cookie_ {
     IOSPlatform(),
     MacOSPlatform(),
     AndroidPlatform(),
-    WebPlatform(),
-    WindowsPlatform()
+    WebPlatform()
   ])
   dynamic value;
 
@@ -35,17 +33,12 @@ class Cookie_ {
     MacOSPlatform(),
     AndroidPlatform(
         note:
-            "available on Android only if [WebViewFeature.GET_COOKIE_INFO] feature is supported."),
-    WindowsPlatform()
+            "available on Android only if [WebViewFeature.GET_COOKIE_INFO] feature is supported.")
   ])
   int? expiresDate;
 
   ///Indicates if the cookie is a session only cookie.
-  @SupportedPlatforms(platforms: [
-    IOSPlatform(),
-    MacOSPlatform(),
-    WindowsPlatform()
-  ])
+  @SupportedPlatforms(platforms: [IOSPlatform(), MacOSPlatform()])
   bool? isSessionOnly;
 
   ///The cookie domain.
@@ -54,8 +47,7 @@ class Cookie_ {
     MacOSPlatform(),
     AndroidPlatform(
         note:
-            "available on Android only if [WebViewFeature.GET_COOKIE_INFO] feature is supported."),
-    WindowsPlatform()
+            "available on Android only if [WebViewFeature.GET_COOKIE_INFO] feature is supported.")
   ])
   String? domain;
 
@@ -65,8 +57,7 @@ class Cookie_ {
     MacOSPlatform(),
     AndroidPlatform(
         note:
-            "available on Android only if [WebViewFeature.GET_COOKIE_INFO] feature is supported."),
-    WindowsPlatform()
+            "available on Android only if [WebViewFeature.GET_COOKIE_INFO] feature is supported.")
   ])
   HTTPCookieSameSitePolicy_? sameSite;
 
@@ -76,8 +67,7 @@ class Cookie_ {
     MacOSPlatform(),
     AndroidPlatform(
         note:
-            "available on Android only if [WebViewFeature.GET_COOKIE_INFO] feature is supported."),
-    WindowsPlatform()
+            "available on Android only if [WebViewFeature.GET_COOKIE_INFO] feature is supported.")
   ])
   bool? isSecure;
 
@@ -87,8 +77,7 @@ class Cookie_ {
     MacOSPlatform(),
     AndroidPlatform(
         note:
-            "available on Android only if [WebViewFeature.GET_COOKIE_INFO] feature is supported."),
-    WindowsPlatform()
+            "available on Android only if [WebViewFeature.GET_COOKIE_INFO] feature is supported.")
   ])
   bool? isHttpOnly;
 
@@ -98,8 +87,7 @@ class Cookie_ {
     MacOSPlatform(),
     AndroidPlatform(
         note:
-            "available on Android only if [WebViewFeature.GET_COOKIE_INFO] feature is supported."),
-    WindowsPlatform()
+            "available on Android only if [WebViewFeature.GET_COOKIE_INFO] feature is supported.")
   ])
   String? path;
 

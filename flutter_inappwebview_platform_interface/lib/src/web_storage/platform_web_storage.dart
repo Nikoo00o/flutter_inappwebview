@@ -33,7 +33,6 @@ class PlatformWebStorageCreationParams {
 ///- iOS
 ///- MacOS
 ///- Web
-///- Windows
 ///{@endtemplate}
 abstract class PlatformWebStorage extends PlatformInterface
     implements Disposable {

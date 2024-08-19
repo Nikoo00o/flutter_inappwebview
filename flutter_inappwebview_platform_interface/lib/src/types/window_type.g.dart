@@ -20,12 +20,9 @@ class WindowType {
   ///
   ///**Officially Supported Platforms/Implementations**:
   ///- MacOS
-  ///- Windows
   static final CHILD = WindowType._internalMultiPlatform('CHILD', () {
     switch (defaultTargetPlatform) {
       case TargetPlatform.macOS:
-        return 'CHILD';
-      case TargetPlatform.windows:
         return 'CHILD';
       default:
         break;
@@ -51,12 +48,9 @@ class WindowType {
   ///
   ///**Officially Supported Platforms/Implementations**:
   ///- MacOS
-  ///- Windows
   static final WINDOW = WindowType._internalMultiPlatform('WINDOW', () {
     switch (defaultTargetPlatform) {
       case TargetPlatform.macOS:
-        return 'WINDOW';
-      case TargetPlatform.windows:
         return 'WINDOW';
       default:
         break;
