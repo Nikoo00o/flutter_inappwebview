@@ -21,10 +21,11 @@ class WindowsInAppWebViewPlatform extends InAppWebViewPlatform {
   /// Look at using [CookieManager] in `flutter_inappwebview` instead.
   @override
   WindowsCookieManager createPlatformCookieManager(
-    PlatformCookieManagerCreationParams params,
-  ) {
+      PlatformCookieManagerCreationParams params,
+      ) {
     return WindowsCookieManager(params);
   }
+
 
   /// Creates a new [WindowsInAppWebViewController].
   ///
@@ -83,8 +84,8 @@ class WindowsInAppWebViewPlatform extends InAppWebViewPlatform {
   /// Look at using [HeadlessInAppWebView] in `flutter_inappwebview` instead.
   @override
   WindowsHeadlessInAppWebView createPlatformHeadlessInAppWebView(
-    PlatformHeadlessInAppWebViewCreationParams params,
-  ) {
+      PlatformHeadlessInAppWebViewCreationParams params,
+      ) {
     return WindowsHeadlessInAppWebView(params);
   }
 
@@ -94,8 +95,8 @@ class WindowsInAppWebViewPlatform extends InAppWebViewPlatform {
   /// Look at using [WebViewEnvironment] in `flutter_inappwebview` instead.
   @override
   WindowsWebViewEnvironment createPlatformWebViewEnvironment(
-    PlatformWebViewEnvironmentCreationParams params,
-  ) {
+      PlatformWebViewEnvironmentCreationParams params,
+      ) {
     return WindowsWebViewEnvironment(params);
   }
 
@@ -114,8 +115,8 @@ class WindowsInAppWebViewPlatform extends InAppWebViewPlatform {
   /// Look at using [WebStorage] in `flutter_inappwebview` instead.
   @override
   WindowsWebStorage createPlatformWebStorage(
-    PlatformWebStorageCreationParams params,
-  ) {
+      PlatformWebStorageCreationParams params,
+      ) {
     return WindowsWebStorage(params);
   }
 
@@ -125,8 +126,8 @@ class WindowsInAppWebViewPlatform extends InAppWebViewPlatform {
   /// Look at using [LocalStorage] in `flutter_inappwebview` instead.
   @override
   WindowsLocalStorage createPlatformLocalStorage(
-    PlatformLocalStorageCreationParams params,
-  ) {
+      PlatformLocalStorageCreationParams params,
+      ) {
     return WindowsLocalStorage(params);
   }
 
@@ -136,8 +137,8 @@ class WindowsInAppWebViewPlatform extends InAppWebViewPlatform {
   /// Look at using [SessionStorage] in `flutter_inappwebview` instead.
   @override
   WindowsSessionStorage createPlatformSessionStorage(
-    PlatformSessionStorageCreationParams params,
-  ) {
+      PlatformSessionStorageCreationParams params,
+      ) {
     return WindowsSessionStorage(params);
   }
 }
